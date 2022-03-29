@@ -1,0 +1,26 @@
+REGSITERING THE MENU LOCATION :
+
+function my_custom_menu() {
+    register_nav_menus(
+        array(
+            'my-custom-menu' => _( 'My Custom Menu' ),
+            'my-custom-menu-2' =>_('My Second Custom Menu')
+        )
+    );
+}
+add_action( 'init', 'my_custom_menu' );
+
+
+
+
+FOR DISPLAYING THE MENU LOCATION : 
+
+
+<?php 
+    wp_nav_menu( 
+        array( 
+            'theme_location' => 'my-custom-menu'
+        ) 
+    ); 
+?>
+
